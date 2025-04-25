@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <style>
+:root {
+    --bg-color: rgb(244, 246, 248);
+    --text-color: #31312A;
+    --line-color: #bebf93;
+    --heading-color: #31312A;
+}
+.typing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Horizontally center items */
+    justify-content: center;  /* Vertically center items */
+    text-align: center;       /* Center text content */
+    width: 100%;
+    padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Ensure typed text wraps nicely and stays centered */
+#typed-text {
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 100%;
+    white-space: pre-wrap; /* allow line breaks */
+    text-align: center;
+}
+body {
+    margin:0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: "Courier New", Courier, monospace;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.5;
+
+    /* ✅ Flexbox Centering */
+    display: flex;
+    /* justify-content: center; Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw; /* Take up full width */
+}
+
+/* ✅ MAIN CONTENT CONTAINER */
+.container {
+    max-width: 500px;  /* Restrict width */
+    width: 100%;  /* Prevents shrinking */
+    padding: 20px;
+    text-align: left; /* Ensure proper text alignment */
+    
+    /* ✅ Force all content into a single block */
+    display: block;
+    flex-direction: column;
+}
+
+/* ✅ Fix Text Wrapping and Multi-Column Issue */
+p, h2, h3, ul, li {
+    column-count: 1 !important; /* Prevents multi-columns */
+    column-gap: 0 !important; /* No gaps */
+    width: 100%;  /* Ensures full width */
+    display: block; /* Forces block display */
+}
+
+/* ✅ Center Title */
+.rui-title {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: var(--text-color);
+    font-family: 'Impact', Arial, sans-serif;
+    margin-bottom: 90px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* ✅ Center Article Title */
+.article-title {
+    font-weight: bold;
+    font-size: 12.5px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* ✅ Center Author Name */
+.author {
+    color: #666;
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ✅ Center Headers */
+h2, h3 {
+    font-weight: bold;
+    font-size: 12.5px;
+    color: var(--heading-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ✅ Ensure Paragraphs are Normal */
+p {
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+/* ✅ Image Placeholder Fix */
+.image-placeholder {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* ✅ Fix Bullet Points */
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+/* ✅ Fix Links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6B9F89;
+}
+
+/* ✅ Fix Bold Text */
+strong {
+    font-weight: bold;
+    color: var(--heading-color);
+}
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <!-- <button class="back-button" onclick="window.location.href='index.html'">Back to Home</button> -->
+
+    <!-- Typing Effect Container -->
+    <div class="typing-container" id="typing-container">
+        <div class="rui-title" onclick="window.location.href='index.html'">RUI</div>
+
+        <span id="typed-text"></span><span class="cursor"></span>
+    </div>
+
+    <!-- Background Canvas -->
+    <script src="thoughts.js"></script>
+
+    <!-- Typing Effect Script -->
+    <script>
+        const text = 
+        `"O me! O life!... of the questions of these recurring; of the endless trains of the faithless... of cities filled with the foolish; 
+what good amid these, O me, O life?" 
+
+An answer to Whitman’s question— 
+That you exist; that the powerful play goes on and you may contribute a verse. We create because we are members of the human race. And the human race is filled with passion.
+
+Thoreau wrote, "The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation." 
+
+We must strive to find our own voice—the longer we wait, the harder it becomes.
+`.trim();
+
+        let index = 0;
+        const speed = 50; // Typing speed in milliseconds
+
+        function typeText() {
+            const container = document.getElementById('typing-container');
+            const typedText = document.getElementById('typed-text');
+            
+            if (index < text.length) {
+                typedText.innerHTML += text.charAt(index);
+                index++;
+                // Scroll the container to the bottom as text grows
+                container.scrollTop = container.scrollHeight;
+                setTimeout(typeText, speed);
+            }
+        }
+
+        // Start typing effect when page loads
+        window.onload = function() {
+            typeText();
+        };
+    </script>
+</body>
+</html>

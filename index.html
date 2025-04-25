@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>rui shang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="intro">
+      <p>const self = &#123;</p>
+      <h1><a id="easter-egg" href="#ascii">Rui Shang</a></h1>
+      <p>&#125;</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a id="nav-about" href="#about">About</a></li>
+        <li><a id="nav-writeup" href="#writeup">Research</a></li>
+        <li><a id="nav-built" href="#built">Built</a></li>
+        <li><a id="nav-thoughts" href="#thoughts">Thoughts</a></li>
+        <li><a id="nav-contact" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switcher">
+      <a href="#" class="lang" onclick="switchLanguage('en')">EN</a> / 
+      <a href="#" class="lang" onclick="switchLanguage('zh')">CN</a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="ascii">
+      <div id="ascii-container">
+        <canvas id="asciiCanvas"></canvas>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 id="section-about">About</h2>
+      <div id="about-markdown-content" class="content"></div>
+    </section>
+
+    <section id="writeup">
+      <h2 id="section-writeup">Research</h2>
+      <div class="container">
+        <div class="section-title" id="crypto-title">Crypto, Blockchain</div>
+        <div class="description" id="crypto-desc">research, invest, and contribute, stay optimistic and patient.</div>
+
+        <div class="entry">
+          <a href="https://medium.com/@poporuii/stablecoin-playbook-flipping-billions-to-trillions-14ddfe07b6fb" id="entry-stablecoin" class="entry-title" target="_blank" rel="noopener noreferrer">Stablecoin Playbook: Flipping to Trillions</a>
+          <div class="entry-seed">Nov, 2024</div>
+        </div>
+
+        <div class="entry">
+          <a href="https://medium.com/@poporuii/real-yield-on-bitcoin-15a132ff2b17" id="entry-bitcoin" class="entry-title" target="_blank" rel="noopener noreferrer">Real Yield On Bitcoin</a>
+          <div class="entry-seed">May, 2025</div>
+        </div>
+
+        <div class="entry">
+          <a href="https://medium.com/@poporuii/webauthn-and-passkey-key-management-for-daily-crypto-users-ea13c918c10c" id="entry-key" class="entry-title" target="_blank" rel="noopener noreferrer">Key Management: WebAuthn and Passkey</a>
+          <div class="entry-seed">Dec, 2023</div>
+        </div>
+
+        <div class="entry">
+          <a href="https://medium.com/@poporuii/critiquing-depin-false-hope-or-real-dawn-cce8932c0872" id="entry-depin" class="entry-title" target="_blank" rel="noopener noreferrer">Critiquing DePIN: False Hope or Real Dawn</a>
+          <div class="entry-seed">Apr, 2024</div>
+        </div>
+
+        <div class="entry">
+          <a href="https://medium.com/@poporuii/how-close-are-we-to-a-chain-abstraction-future-ba46269be7b2" id="entry-chain" class="entry-title" target="_blank" rel="noopener noreferrer">Chain Abstraction: How Close Are We?</a>
+          <div class="entry-seed">Apr, 2024</div>
+        </div>
+
+        <div class="entry">
+          <a href="https://medium.com/@poporuii/decentralized-science-desci-how-blockchain-disrupts-the-science-landscape-64d4cf283e17" id="entry-desci" class="entry-title" target="_blank" rel="noopener noreferrer">DeSci: How Blockchain Disrupts Science</a>
+          <div class="entry-seed">Apr, 2023</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-title" id="consumer-title">Consumer, Product</div>
+        <div class="description" id="consumer-desc">optimal decision-making, hands-on building, verify outcome.</div>
+
+        <div class="entry">
+          <a href="https://popolandruii.notion.site/TikTok-Notes-from-2021-17ddde23417f80d398f9fb3af462b63a?pvs=4" id="entry-tiktok" class="entry-title" target="_blank" rel="noopener noreferrer">TikTok: Product Manager Handbook</a>
+          <div class="entry-seed">Dec, 2021</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="built">
+      <h2 id="section-built">Built</h2>
+      <div class="container">
+        <div id="built-markdown-content" class="content"></div>
+      </div>
+    </section>
+
+    <section id="thoughts">
+      <h2 id="section-thoughts">Thoughts</h2>
+      <div class="container">
+        <div id="thoughts-markdown-content" class="content"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 id="section-contact">Contact</h2>
+      <div id="contact-markdown-content" class="content"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    let currentLanguage = 'en';
+
+    function fetchAndRenderMarkdown(url, containerId) {
+      fetch(url)
+        .then(res => res.text())
+        .then(text => {
+          const html = marked.parse(text);
+          document.getElementById(containerId).innerHTML = html;
+        });
+    }
+
+    function switchLanguage(lang) {
+      currentLanguage = lang;
+      loadContent();
+
+      document.getElementById('nav-about').textContent = lang === 'en' ? 'About' : '关于';
+      document.getElementById('nav-writeup').textContent = lang === 'en' ? 'Research' : '研究';
+      document.getElementById('nav-built').textContent = lang === 'en' ? 'Built' : '项目';
+      document.getElementById('nav-thoughts').textContent = lang === 'en' ? 'Thoughts' : '想法';
+      document.getElementById('nav-contact').textContent = lang === 'en' ? 'Contact' : '联系';
+
+      document.getElementById('section-about').textContent = lang === 'en' ? 'About' : '关于';
+      document.getElementById('section-writeup').textContent = lang === 'en' ? 'Research' : '研究';
+      document.getElementById('section-built').textContent = lang === 'en' ? 'Built' : '项目';
+      document.getElementById('section-thoughts').textContent = lang === 'en' ? 'Thoughts' : '想法';
+      document.getElementById('section-contact').textContent = lang === 'en' ? 'Contact' : '联系';
+
+      document.getElementById('crypto-title').textContent = lang === 'en' ? 'Crypto, Blockchain' : '加密货币与区块链';
+      document.getElementById('crypto-desc').textContent = lang === 'en' ? 'research, invest, and contribute, stay optimistic and patient.' : '研究、投资与贡献，保持乐观与耐心。';
+      document.getElementById('consumer-title').textContent = lang === 'en' ? 'Consumer, Product' : '消费与产品';
+      document.getElementById('consumer-desc').textContent = lang === 'en' ? 'optimal decision-making, hands-on building, verify outcome.' : '最佳决策、动手实践、验证结果。';
+
+      document.getElementById('entry-stablecoin').textContent = lang === 'en' ? 'Stablecoin Playbook: Flipping to Trillions' : '稳定币剧本：迈向数万亿';
+      document.getElementById('entry-bitcoin').textContent = lang === 'en' ? 'Real Yield On Bitcoin' : '比特币真实收益率';
+      document.getElementById('entry-key').textContent = lang === 'en' ? 'Key Management: WebAuthn and Passkey' : '密钥管理：WebAuthn与通行密钥';
+      document.getElementById('entry-depin').textContent = lang === 'en' ? 'Critiquing DePIN: False Hope or Real Dawn' : '评析DePIN：虚假希望还是黎明曙光';
+      document.getElementById('entry-chain').textContent = lang === 'en' ? 'Chain Abstraction: How Close Are We?' : '链抽象化：我们离目标还有多远？';
+      document.getElementById('entry-desci').textContent = lang === 'en' ? 'DeSci: How Blockchain Disrupts Science' : '去中心化科学：区块链如何改变科研？';
+      document.getElementById('entry-tiktok').textContent = lang === 'en' ? 'TikTok: Product Manager Handbook' : 'TikTok产品经理手册';
+    
+
+    }
+
+    function loadContent() {
+
+  fetchAndRenderMarkdown(`about-${currentLanguage}.md`, 'about-markdown-content');
+  fetchAndRenderMarkdown(`built-${currentLanguage}.md`, 'built-markdown-content');
+  fetchAndRenderMarkdown(`thoughts-${currentLanguage}.md`, 'thoughts-markdown-content');
+  fetchAndRenderMarkdown(`contact-${currentLanguage}.md`, 'contact-markdown-content'); // ✅ Add this line
+
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadContent();
+
+      let lastScrollTop = 0;
+      window.addEventListener('scroll', function () {
+        const sidebar = document.getElementById('sidebar');
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+          sidebar.style.transform = 'translateX(-100%)';
+        } else {
+          sidebar.style.transform = 'translateX(0)';
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+      }, false);
+    });
+  </script>
+
+  <script src="script.js"></script>
+  <script type="module" src="gradient.js"></script>
+
+</body>
+</html>

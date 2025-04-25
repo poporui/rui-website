@@ -1,0 +1,1 @@
+[ [Twitter](https://x.com/ruiixyz), [Medium](https://medium.com/@poporuii), [Linkedin](https://www.linkedin.com/in/rui-shang-143a1a223/) ]

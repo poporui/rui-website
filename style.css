@@ -1,0 +1,337 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-grey: grey;
+  --border: #dddddd;
+  --font-sans: 'Metrophobic', sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  font-family: var(--font-sans);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+aside {
+  width: 280px;
+  min-height: 100vh;
+  padding: 180px 70px 70px 70px;
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--bg);
+  z-index: 999;
+}
+
+main {
+  margin-left: 280px;
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+main section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 60px;
+}
+
+/* Sidebar */
+.intro p {
+  font-size: 14px;
+}
+
+.intro h1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.intro h1 a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.intro h1 a:hover {
+  color: #2b789f;
+}
+
+nav {
+  margin-top: 84px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #2b789f;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  position: absolute;
+  bottom: 60px;
+  left: 70px;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  color: var(--text);
+}
+
+.lang-switcher .lang {
+  text-decoration: none;
+  color: var(--text);
+  margin: 0 2px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.lang-switcher .lang:hover {
+  opacity: 1;
+}
+
+.lang-switcher .active {
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* Common Text */
+main h2 {
+  font-size: 15px;
+  margin-bottom: 32px;
+}
+
+main p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Canvas */
+#ascii-container {
+  width: 400px;
+  height: 400px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Containers */
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* About / Thoughts Section */
+#about-markdown-content,
+#thoughts-markdown-content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#about-markdown-content p,
+#thoughts-markdown-content p {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: var(--font-sans);
+  color: var(--text);
+  margin: 12px 0;
+}
+
+/* Write-up Section */
+.section-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--text);
+  margin: 20px 0 10px;
+}
+
+.description {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-grey);
+  line-height: 1.3;
+  margin: 0 0 30px;
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px dashed var(--border);
+  margin: 20px 0 30px;
+}
+
+/* Entries */
+.entry {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.8;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.entry a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.entry a:hover {
+  color: #2b789f;
+}
+
+.entry-title {
+  font-size: 15px;
+}
+
+/* Built Section */
+.content {
+  font-family: var(--font-sans);
+  font-size: 19px;
+  max-width: 520px;
+}
+
+html {
+  line-height: 1.6;  /* 默认继承 */
+}
+
+.content p {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-grey);
+  margin: 0 0 30px;
+}
+
+.content p strong {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1;
+  display: block;
+  color: var(--text);
+  margin-top: 0;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 20px 0;
+  width: 100%;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--text);
+}
+
+.content a:hover {
+  color: #2b789f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+
+  aside {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px 20px 10px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro p {
+    display: none; /* 隐藏上下的 { } */
+  }
+
+  .intro h1 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav li {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .lang-switcher {
+    position: relative;
+    margin-top: 8px;
+    left: 0;
+    bottom: 0;
+    font-size: 11px;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  main section {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  #ascii-container {
+    width: 300px;
+    height: 300px;
+  }
+}
