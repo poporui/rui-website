@@ -176,7 +176,7 @@ canvas {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  /* padding: 0 20px; */
+  padding: 0 20px; /* ✅ move padding here */
 }
 
 #about-markdown-content p,
@@ -187,7 +187,7 @@ canvas {
   font-family: var(--font-sans);
   color: var(--text);
   margin: 12px 0;
-  padding: 0 20px; /* ✅ Add this line */
+  /* remove padding here */
 }
 
 
@@ -290,6 +290,17 @@ html {
   color: var(--hover);
 }
 
+#thoughts-markdown-content p {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  font-style: normal; /* ✅ Normal, not italic */
+  font-size: 15px; /* ✅ Slightly bigger for essay style */
+  color: var(--text); /* ✅ Use your main text color */
+  line-height: 1.8;
+  margin: 12px 0;
+}
+
 #mobile-header {
   display: none;
   font-family: var(--font-sans);
@@ -352,7 +363,7 @@ html {
   }
 
   #ascii-container {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
   }
 }
