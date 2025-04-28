@@ -1,10 +1,11 @@
 :root {
   --bg: #ffffff;
-  --text: #000000;
+  --text: #0e0d0d;
   --text-grey: grey;
-  --border: #dddddd;
+  --border: #e0e0e0;
   --font-sans: 'Metrophobic', sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
+  --hover: #caba0b; /* ✅ Add this new hover color variable */
 }
 
 /* Reset */
@@ -71,7 +72,7 @@ main section {
 }
 
 .intro h1 a:hover {
-  color: #2b789f;
+  color: var(--hover);
 }
 
 nav {
@@ -83,6 +84,8 @@ nav ul {
 }
 
 nav li {
+  text-align: left;
+
   margin-bottom: 16px;
   font-size: 14px;
 }
@@ -90,14 +93,20 @@ nav li {
 nav a {
   text-decoration: none;
   color: var(--text);
-  padding-bottom: 5px;
   display: inline-block;
-  border-bottom: 1px solid var(--border);
   transition: 0.3s;
 }
 
+nav a span {
+  display: block;
+  width: 100px; /* ✅ Fixed width for underline */
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+  text-align: left; /* ✅ align text to the left */
+}
+  
 nav a:hover {
-  color: #2b789f;
+  color: var(--hover);
 }
 
 /* Language Switcher */
@@ -130,12 +139,14 @@ nav a:hover {
 
 /* Common Text */
 main h2 {
+  font-family: "Work Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 500;
   font-size: 15px;
   margin-bottom: 32px;
 }
 
 main p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -165,7 +176,7 @@ canvas {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 #about-markdown-content p,
@@ -178,7 +189,7 @@ canvas {
   margin: 12px 0;
 }
 
-/* Write-up Section */
+/* research Section */
 .section-title {
   font-weight: bold;
   font-size: 15px;
@@ -203,51 +214,55 @@ canvas {
 /* Entries */
 .entry {
   display: flex;
-  font-size: 14px;
-  line-height: 1.8;
   justify-content: space-between;
-  padding-bottom: 12px;
-}
-
-.entry a {
+  align-items: center;
+  font-size: 14px;
+  /* border-bottom: 1px dotted var(--text); */
+  line-height: 2;
   text-decoration: none;
   color: var(--text);
+  margin-bottom:14px;
   transition: color 0.3s ease;
 }
 
-.entry a:hover {
-  color: #2b789f;
+.entry:hover {
+  color: var(--hover);
 }
 
 .entry-title {
   font-size: 15px;
 }
 
+.entry-seed {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
 /* Built Section */
 .content {
   font-family: var(--font-sans);
-  font-size: 19px;
-  max-width: 520px;
+  font-size: 15px;
 }
 
 html {
   line-height: 1.6;  /* 默认继承 */
 }
 
+.content p strong {
+  font-size: 15px;
+  font-style:normal;
+  line-height: 1.2;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
 .content p {
   font-style: italic;
   font-size: 14px;
   color: var(--text-grey);
-  margin: 0 0 30px;
-}
-
-.content p strong {
-  font-style: normal;
-  font-size: 15px;
-  line-height: 1;
-  display: block;
-  color: var(--text);
-  margin-top: 0;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 .content hr {
@@ -257,17 +272,34 @@ html {
   width: 100%;
 }
 
-.content a {
-  color: inherit;
+.content p strong a {
+  color: var(--text);
+  border-bottom: none;
   text-decoration: none;
+}
+
+.content p a {
+  color: var(--text-grey);
   border-bottom: 1px dotted var(--text);
+  text-decoration: none;
 }
 
-.content a:hover {
-  color: #2b789f;
+.content p a:hover {
+  color: var(--hover);
 }
 
-/* Mobile */
+#mobile-header {
+  display: none;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* Mobile view adjustments */
+
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -276,53 +308,40 @@ html {
   }
 
   aside {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 20px 20px 10px 20px;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
+  }
+  #mobile-header {
+    display: block; /* Show mobile title */
+  }
+
+  .intro {
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 
   .intro p {
-    display: none; /* 隐藏上下的 { } */
+    display: none; /* ✅ Hide { } */
   }
 
   .intro h1 {
     font-size: 15px;
     margin: 0;
+    padding: 0;
     font-weight: bold;
   }
 
   nav {
-    margin-top: 10px;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav li {
-    margin: 0;
-    font-size: 13px;
+    display: none; /* ✅ Completely hide the menu */
   }
 
   .lang-switcher {
-    position: relative;
-    margin-top: 8px;
-    left: 0;
-    bottom: 0;
-    font-size: 11px;
+    display: none; /* ✅ Also hide the language switcher */
   }
 
   main {
     margin: 0;
+    padding-top: 60px; /* ✅ Add a little padding so content not hidden behind header */
   }
 
   main section {

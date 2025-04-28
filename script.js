@@ -22,7 +22,7 @@ let hoverColor = "#F4F6F8";
 const charColors = {
     ".": C1, ",": C1, ":": C1, 
     ";": C2, "?": C2,          
-    "#": C3, "@": C3           
+    "#": C3, "@": C3,"R":C3,           
 };
 
 const canvas = document.getElementById("asciiCanvas");
@@ -50,7 +50,7 @@ canvas.addEventListener("mouseleave", () => {
 
 let img = new Image();
 img.crossOrigin = "anonymous";
-img.src = "../public/girl.png"; // Relative path from `ascii-art-light/`
+img.src = "girl.png"; // Relative path from `ascii-art-light/`
 
 img.onload = function () {
     console.log("✅ Image loaded successfully!");
