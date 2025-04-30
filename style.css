@@ -339,6 +339,9 @@ html {
     color: grey;
   }
 
+  .entry-seed {
+    display: none;
+  }
   .intro {
     margin: 0;
     padding: 0;

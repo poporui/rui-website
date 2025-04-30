@@ -16,7 +16,7 @@ When the right idea hit, I co-founded [AhaClub](https://sj.qq.com/appdetail/wxd8
 
 Turns out, it was crypto and blockchain.
 
-People called it a bubble— maybe, but I don’t laugh at things I don’t fully understand. That mindset eventually led me to become a full-time investor after graduating in 2023. It wasn’t part of the plan, but it turned out to be the fastest way to learn.
+People called it a bubble— maybe, but I don’t laugh at things I don’t fully understand. That mindset eventually led me to become a [full-time investor](https://www.7xvc.com/) after graduating in 2023. It wasn’t part of the plan, but it turned out to be the fastest way to learn.
 
 Crypto has already proven itself: first as a new form of money— ask [MicroStrategy](https://www.strategy.com/) or [BlackRock](https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf). Then, as a parallel financial system. And future, as the foundation for the next internet, decentralization and ownership might not matter until they do. Working in the space has taught me how capital allocates and how to reconcile short-term survival with long-term conviction. By no means is it easy, especially when speculation, macro shifts, and micro cycles constantly test your resolve.
 
