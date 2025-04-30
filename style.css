@@ -325,6 +325,18 @@ html {
   }
   #mobile-header {
     display: block; /* Show mobile title */
+    font-size: 14px;
+    text-decoration: none;
+  }
+  #mobile-header a {
+    padding-top: 10px;
+    color: grey;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  
+  #mobile-header a:visited {
+    color: grey;
   }
 
   .intro {
