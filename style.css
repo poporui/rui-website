@@ -193,7 +193,6 @@ canvas {
 
 /* research Section */
 .section-title {
-  font-weight: bold;
   font-size: 15px;
   color: var(--text);
   margin: 20px 0 10px;
@@ -215,6 +214,7 @@ canvas {
 
 /* Entries */
 .entry {
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -323,11 +323,14 @@ html {
   aside {
     display: none;
   }
+
   #mobile-header {
     display: block; /* Show mobile title */
+    font-weight: normal;
     font-size: 14px;
     text-decoration: none;
   }
+
   #mobile-header a {
     padding-top: 10px;
     color: grey;
