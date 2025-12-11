@@ -1,7 +1,6 @@
 A morning in 2018, over breakfast, a YouTube video changed my life. [Daniel Shiffman](https://en.wikipedia.org/wiki/Daniel_Shiffman) was live-coding with pure joy and chaos. Something cracked open. I taught myself coding and design — not to become a developer, but to give shape to my curiosity.
 
 
-
 One truth stood out as I kept learning: tools are just tools. Questions are what move the world.
 
 “What if rice could grow in the Saudi desert?”  
@@ -10,15 +9,17 @@ One truth stood out as I kept learning: tools are just tools. Questions are what
 
 2020 was insane. I built prototypes for all those ideas — from web apps to robotics to full system designs. As a side effect, those experiments also got me into [NYU](https://www.nyu.edu/) grad school.
 
-COVID left little else to do, so I joined [TikTok](https://www.tiktok.com/) as a product manager in 2021, during my gap year. It was a huge leap. I learned how to ship products used by billions: researching, prototyping, AB tests, AI systems. It was an elite team — but I also realized: being a tiny gadget inside a giant machine wasn’t what I want. 
+COVID left little else to do, so I joined [TikTok](https://www.tiktok.com/) as a product manager in 2021, during my gap year. It was a huge leap. Researching, prototyping, AB tests, AI systems, shipping product used by billions. It was an elite team, but I realized: being a tiny gadget in a giant machine wasn’t what I want. 
 
-So I moved to New York soon after, to see what the greatest city had waiting for me.
+So I moved to New York, see what the greatest city would offer me.
 
 Turns out, it was blockchain.
 
-People called it a bubble — maybe, but I won't laugh at things I don’t fully understand. That mindset eventually led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto has first became a new form of money, then a parallel financial system, and future next internet. But it's not easy when volatility and ponzi keeps deciving the vision. 
+People called it a bubble — maybe, but I won't laugh at things I don’t fully understand. That mindset eventually led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto has first became a new form of money, then a parallel financial system, and next internet. By no means it's easy when volatility and ponzi keeps deciving the vision. 
 
-Building [edgeX](https://www.edgex.exchange/en) is my current answer, a perpetual future derivative platform delivering 24/7 liquidity and leverage for users. We're at a hyperfinancial era where people trade options on their phone. the future will be mobile, accessible. Retail users owning the tool and Wall Street will have to adapt, or it will fade.
+2025, building [edgeX](https://www.edgex.exchange/en) is my answer, a perpetual future derivative exchange delivering 24/7 access, liquidity and leverage for users. 
+
+Tiktok did it right by chopping 30min Youtube video into 30sec, we're at a hyperfinancial era, the future will be mobile, accessible. Retail users owning the tool and Wall Street will have to adapt, or it will fade.
 
 I’d rather be optimistic and wrong than pessimistic and right.
 
