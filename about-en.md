@@ -16,7 +16,7 @@ So I moved to New York soon after, to see what the greatest city had waiting for
 
 Turns out, it was blockchain.
 
-People called it a bubble — maybe, but I won't laugh at things I don’t fully understand. That mindset eventually led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto has already proven itself: first as a new form of money, then, as a parallel financial system, and future next internet. But it's not easy when volatility and ponzi keeps deciving the vision. 
+People called it a bubble — maybe, but I won't laugh at things I don’t fully understand. That mindset eventually led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto has first became a new form of money, then a parallel financial system, and future next internet. But it's not easy when volatility and ponzi keeps deciving the vision. 
 
 Building [edgeX](https://www.edgex.exchange/en) is my current answer, a perpetual future derivative platform delivering 24/7 liquidity and leverage for users. We're at a hyperfinancial era where people trade options on their phone. the future will be mobile, accessible. Retail users owning the tool and Wall Street will have to adapt, or it will fade.
 
