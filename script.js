@@ -97,8 +97,8 @@ function processImage(image) {
 
             let dx = Math.abs(mouseX - x);
             let dy = Math.abs(mouseY - y);
-            let hoverThreshold = resolution * (1 + Math.random() * 2);
-            let isHovered = (dx < hoverThreshold * 1.4 && dy < hoverThreshold * 1.5);
+            let hoverThreshold = resolution * (1 + Math.random() *2);
+            let isHovered = (dx < hoverThreshold * 2 && dy < hoverThreshold * 2);
 
             ctx.fillStyle = isHovered ? hoverColor : charColors[asciiChar] || characterColor;
             ctx.fillText(asciiChar, x, y);

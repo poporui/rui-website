@@ -37,6 +37,8 @@
       <a href="#" class="lang" onclick="switchLanguage('en')">EN</a> / 
       <a href="#" class="lang" onclick="switchLanguage('zh')">CN</a>
     </div>
+
+    <!-- <button id="toggle-gradient-bg">🌈 Toggle Gradient</button> -->
   </aside>
 
   <main>
@@ -237,6 +239,115 @@
   </script>
 
   <script src="script.js"></script>
-  <script type="module" src="gradient.js"></script>
+  
+<!-- 
+  <script>
+    // GRADIENT TOGGLE FUNCTIONALITY - NO MOUSE INTERACTION
+    let gradientVisible = false;
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      // Your existing loadContent and scroll code here...
+      
+      // Initialize gradient toggle
+      initGradientToggle();
+    });
+    
+    function initGradientToggle() {
+      console.log('Looking for toggle button...');
+      const toggleButton = document.getElementById('toggle-gradient-bg');
+      
+      if (!toggleButton) {
+        console.error('Toggle button not found! Creating it...');
+        
+        // Create the button if it doesn't exist
+        const button = document.createElement('button');
+        button.id = 'toggle-gradient-bg';
+        button.textContent = '🌈 Toggle Gradient';
+        button.style.cssText = 'position: fixed !important; bottom: 20px !important; left: 20px !important; background: #ff0066 !important; color: white !important; border: 3px solid yellow !important; padding: 15px 20px !important; border-radius: 8px !important; font-size: 16px !important; font-weight: bold !important; cursor: pointer !important; z-index: 9999 !important;';
+        document.body.appendChild(button);
+        console.log('Button created and added to body');
+        
+        // Try again with the new button
+        setTimeout(() => initGradientToggle(), 100);
+        return;
+      }
+      
+      console.log('Gradient toggle button found and initialized');
+      
+      toggleButton.addEventListener('click', function() {
+        console.log('Gradient button clicked!');
+        const button = this;
+        
+        if (!gradientVisible) {
+          console.log('Creating gradient...');
+          // Create gradient background with multiple color layers
+          const gradientDiv = document.createElement('div');
+          gradientDiv.className = 'gradient-bg';
+          gradientDiv.id = 'dynamic-gradient';
+          
+          // Create individual color layers - now with more yellow and pink!
+          const redLayer = document.createElement('div');
+          redLayer.className = 'red-layer';
+          
+          const yellowLayer = document.createElement('div');
+          yellowLayer.className = 'yellow-layer';
+          
+          const yellow2Layer = document.createElement('div');
+          yellow2Layer.className = 'yellow2-layer';
+          
+          const pinkLayer = document.createElement('div');
+          pinkLayer.className = 'pink-layer';
+          
+          const cyanLayer = document.createElement('div');
+          cyanLayer.className = 'cyan-layer';
+          
+          const orangeLayer = document.createElement('div');
+          orangeLayer.className = 'orange-layer';
+
+          const blueLayer = document.createElement('div');
+          orangeLayer.className = 'blue-layer';
+          
+          gradientDiv.appendChild(redLayer);
+          gradientDiv.appendChild(yellowLayer);
+          gradientDiv.appendChild(yellow2Layer);
+          gradientDiv.appendChild(pinkLayer);
+          gradientDiv.appendChild(cyanLayer);
+          gradientDiv.appendChild(orangeLayer);
+          
+          document.body.appendChild(gradientDiv);
+          document.body.classList.add('gradient-active');
+          
+          // Trigger animation
+          setTimeout(() => {
+            gradientDiv.classList.add('active');
+          }, 50);
+          
+          button.textContent = '🌈 Disable Gradient';
+          gradientVisible = true;
+          
+        } else {
+          console.log('Removing gradient...');
+          // Remove gradient background
+          const existingGradient = document.getElementById('dynamic-gradient');
+          
+          if (existingGradient) {
+            existingGradient.classList.remove('active');
+            document.body.classList.remove('gradient-active');
+            setTimeout(() => {
+              if (document.body.contains(existingGradient)) {
+                document.body.removeChild(existingGradient);
+              }
+            }, 800);
+          }
+          
+          button.textContent = '🌈 Toggle Gradient';
+          gradientVisible = false;
+        }
+      });
+    }
+    </script> -->
+
+
+<div id="gradient-bg-placeholder" style="display: none;"></div>
 </body>
 </html>
