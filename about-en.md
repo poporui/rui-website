@@ -7,9 +7,9 @@ One truth stood out as I kept learning: tools are just tools. Questions are what
 “What if the visually impaired could date without ever swiping left?”  
 “What if you could preserve and share your dreams?”
 
-2020 was insane. I built prototypes for all those ideas — from web apps to robotics to full system designs. As a side effect, those experiments also got me into [NYU](https://www.nyu.edu/) grad school.
+2020 was insane. I built prototypes for all those ideas — from web apps to robotics to full system designs. On a side note, those experiments also got me into [NYU](https://www.nyu.edu/) grad school.
 
-COVID left little else to do, so I joined [TikTok](https://www.tiktok.com/) as a product manager in 2021, during my gap year. It was a huge leap. Researching, prototyping, AB tests, AI systems, shipping product used by billions. It was an elite team, but I realized: being a tiny gadget in a giant machine wasn’t what I want. 
+COVID left me little else to do, so I joined [TikTok](https://www.tiktok.com/) as a product manager in 2021, during my gap year. It was a huge leap. Researching, prototyping, AB tests, AI systems, shipping product used by billions. It was an elite team, but I realized: being a tiny gadget in a giant machine wasn’t what I want. 
 
 So I moved to New York, see what the greatest city would offer me.
 
