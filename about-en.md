@@ -17,9 +17,7 @@ Turns out, it was blockchain.
 
 People called it a bubble — maybe, but I won't laugh at things I don’t fully understand. That mindset eventually led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto is now a new form of money, a parallel financial system, and eventually internet.
 
-Building [edgeX](https://www.edgex.exchange/en) is my current answer, a perpetual future derivative exchange delivering 24/7 access, liquidity and leverage for users. 
-
-Tiktok did it right by chopping 30 min Youtube video into 30sec, we're at a hyperfinancial era, the future will be mobile, accessible. Retail users owning the tool and Wall Street will have to adapt, or it will fade.
+Beliveing isn't easy, and building [edgeX](https://www.edgex.exchange/en) is my answer from 2025, a perpetual future derivative exchange, delivering 24/7 access, liquidity and leverage. We're at a hyperfinancial era, the future will be mobile, accessible. Retail users owning the tool and Wall Street will have to adapt, or it will fade.
 
 I’d rather be optimistic and wrong than pessimistic and right.
 
