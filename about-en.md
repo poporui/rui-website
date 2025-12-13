@@ -11,7 +11,7 @@ One truth stood out as I kept learning: tools are just tools. Questions are what
 
 COVID left me little else to do, so I joined [TikTok](https://www.tiktok.com/) as a product manager in 2021, during my gap year. It was a huge leap. Researching, prototyping, AB tests, AI systems, shipping product used by billions. It was an elite team, but I realized: being a tiny gadget in a giant machine wasn’t what I want. 
 
-So I moved to New York, see what the greatest city would offer me.
+Soon after, I moved to New York, see what it would offer me.
 
 Turns out, it was blockchain.
 
