@@ -15,7 +15,7 @@ Soon after, I moved to New York, see what it would offer me.
 
 Turns out, it was blockchain.
 
-People called it a bubble — maybe, but I wouldn't laugh at things I don’t fully understand. That led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto is now a new form of money, a parallel financial system, and eventually, new internet. Beliving isn't easy when volatility keep kicks in.
+People called it a bubble — maybe, but I wouldn't laugh at things I don’t fully understand. That led me to become an [investor](https://www.7xvc.com/) after graduating in 2023. Crypto is now a new form of money, a parallel financial system, and eventually, new internet. Beliving isn't easy when volatility keep kicking in.
 
 Building [edgeX](https://www.edgex.exchange/en) is my answer from 2025. A perpetual future derivative exchange, delivering 24/7 access, liquidity and leverage. TikTok’s genius lies in compressing 30-minute video into 30 sec, and finance is headed into the same era of fragmentation. The future will be mobile, accessible. Wall Street will have to adapt, or it will fade.
 
